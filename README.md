@@ -6,6 +6,7 @@ WEAPI / EAPI 协议取回**下载直链**。洛雪音乐（LX Music 桌面版 / 
 
 > 仅用于个人学习与研究，请使用你本人账号、仅收听你有权收听的内容，并遵守网易云相关服务条款。
 > 取址会消耗账号的下载额度，且可能涉及网易云下载权限；频繁请求可能被限流。
+<img width="1908" height="933" alt="image" src="https://github.com/user-attachments/assets/293de949-1152-467f-8151-e2e00c0e0f06" />
 
 ---
 
