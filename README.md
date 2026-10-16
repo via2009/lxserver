@@ -1,4 +1,4 @@
-# 网易云「本人授权」音源（PHP 版，适配 LX Music / lxserver）
+# 网易云「本人授权」音源（PHP 版，适配 LX Music / lxserver，建议配合xiaomusic食用）
 
 把你**本人的网易云 VIP 账号 Cookie** 保存在自己的 PHP 服务器上，由 PHP 用网易云的
 WEAPI / EAPI 协议取回**下载直链**。洛雪音乐（LX Music 桌面版 / 移动版 / **lxserver**）
