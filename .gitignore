@@ -1,0 +1,9 @@
+# 含登录凭证，切勿提交
+config.php
+config.php.*
+
+# 网页端写入的可写 Cookie 数据目录（含登录凭证）
+data/
+
+# 例外：保留示例配置模板
+!config.php.example

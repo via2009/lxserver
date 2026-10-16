@@ -1,0 +1,31 @@
+<?php
+/**
+ * 网易云本人授权音源 · 配置文件
+ * 复制本文件为 config.php 并填写真实信息。config.php 切勿提交到代码仓库或公开备份。
+ */
+return [
+    // 必填：本人浏览器登录网易云音乐后复制的 Cookie（至少需含 MUSIC_U 和 __csrf）。
+    // 获取方式：登录 music.163.com → F12 → Network → 刷新 → 选一个发往 music.163.com 的请求
+    //           → 在 Request Headers 里复制整个 Cookie 的值（不要复制 Set-Cookie / HAR）。
+    // 注意：网页端管理页（admin.php）保存的 Cookie 会写入 data/cookie.txt 并优先生效；
+    //       本字段作为回退值（data/cookie.txt 不存在或为空时使用）。
+    'cookie' => '',
+
+    // 可选：本人网易云数字用户 ID。填写后脚本会校验 Cookie 是否属于该账号，避免误用他人 Cookie。
+    'expectedUserId' => '',
+
+    // 可选：访问令牌。设置后，调用本服务必须在请求头 X-Source-Token 或参数 ?token= 中携带相同值。
+    // 部署到公网前强烈建议设置；并在 lx-bridge.js 的 TOKEN 中填同样的值。
+    'apiToken' => '',
+
+    // 可选：管理接口密码。设置后，test.php / admin.php 需要此密码（HTTP Basic 用户名为 admin，或 ?key=）。
+    // 未设置时管理接口会被禁用（出于安全默认）。部署到公网前务必设置强密码。
+    'adminPassword' => '',
+
+    // 单次请求超时（秒），范围 1~60。
+    'timeout' => 15,
+
+    // 是否校验网易云 HTTPS 证书。多数环境保持 true 即可；若你的 PHP 缺少 CA 证书导致 SSL 报错，
+    // 可临时设为 false（仅调试用，生产环境应修复 CA 证书而非关闭校验）。
+    'sslVerify' => true,
+];

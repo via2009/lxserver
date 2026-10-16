@@ -1,0 +1,20 @@
+# 禁止外访配置文件与内部函数库（含网易云登录凭证 / 函数库）
+<Files "config.php">
+    Require all denied
+</Files>
+<Files "common.php">
+    Require all denied
+</Files>
+
+# 关闭目录列表
+Options -Indexes
+
+# 将不存在的文件/目录请求转发到 index.php（支持 /url/wy/<id>/<quality> 这类路径形式）
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # 禁止外访可写数据目录（存放网页设置的 Cookie）
+    RewriteRule ^data/.*$ - [F,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [L]
+</IfModule>
